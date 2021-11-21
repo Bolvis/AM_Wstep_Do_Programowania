@@ -8,7 +8,7 @@
 float * kwadratowa(float a, float b, float c);
 float getNumber();
 
-int main(){
+int main() {
     float a,b,c;
 
     do {
@@ -18,10 +18,10 @@ int main(){
     b = getNumber();
     c = getNumber();
 
-    float * r = kwadratowa(a,b,c);
-    if(r[3] == 1){
+    float * r = kwadratowa(a, b, c);
+    if (r[3] == 1) {
         std::cout << std::setprecision(1) << std::fixed;
-        if (r[0] == 0){
+        if (r[0] == 0) {
             std::cout << r[1];
         } else {
             std::cout  << r[1] << " " << r[2];
@@ -33,9 +33,9 @@ int main(){
     return 0;
 }
 
-float * kwadratowa(float a, float b, float c){
+float * kwadratowa(float a, float b, float c) {
     static float r[4];
-    float delta = powf(b,2) + (-4*a*c);
+    float delta = powf(b, 2) + (-4 * a * c);
     r[0] = delta;
     if(delta >= 0){
         r[1] = (-b - sqrtf(delta)) / (2*a);
@@ -45,9 +45,9 @@ float * kwadratowa(float a, float b, float c){
     return r;
 }
 
-float getNumber(){
+float getNumber() {
     float num;
-    std::cin>>num;
+    std::cin >> num;
     while (std::cin.fail())
     {
         std::cin.clear();
