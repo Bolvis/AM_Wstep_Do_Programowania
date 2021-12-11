@@ -17,16 +17,16 @@
 #include <iostream>
 #include <cmath>
 
+float trapezu(float a, float b, float h){
+    return ((a+b)*h)/2;
+}
+
 float prostokąta(float a, float b){
-    return a * b;
+    return trapezu(a, a, b);
 }
 
 float kwadratu(float a){
-    return a * a;
-}
-
-float trapezu(float a, float b, float h){
-    return ((a+b)*h)/2;
+    return prostokąta(a, a);
 }
 
 float trójkąta(float a, float h){
