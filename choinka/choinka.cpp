@@ -5,10 +5,10 @@
 #include <vector>
 
 int main(int argc, char *argv[]) {
-    int count;
-    std::cin >> count;
-    int width;
-    std::cin >> width;
+    int count = std::stoi(argv[1]);
+//    std::cin >> count;
+    int width = std::stoi(argv[2]);
+//    std::cin >> width;
 
     std::vector<std::string> tab;
 
